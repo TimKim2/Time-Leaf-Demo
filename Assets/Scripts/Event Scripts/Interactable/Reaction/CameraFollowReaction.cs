@@ -16,4 +16,14 @@ public class CameraFollowReaction : DelayedReaction
         else
             FSLocator.controlManager.m_CameraFollow.isAccel = false;       
     }
+
+	public override void Skip(){
+		FSLocator.controlManager.m_CameraFollow.FollowTargetOBJ = cameraTarget;
+		FSLocator.controlManager.m_CameraFollow.FollowSpeed = cameraMovingSpeed;
+
+		if (accel)
+			FSLocator.controlManager.m_CameraFollow.isAccel = true;
+		else
+			FSLocator.controlManager.m_CameraFollow.isAccel = false;  
+	}
 }

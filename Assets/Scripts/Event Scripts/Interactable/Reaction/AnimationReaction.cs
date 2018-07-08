@@ -31,7 +31,7 @@ public class AnimationReaction : DelayedReaction
 		//Debug.Log ("B");
     }
 
-	public void Skip()
+	public override void Skip()
 	{
 		if (TargetObject.tag == "Player") {
 			return;

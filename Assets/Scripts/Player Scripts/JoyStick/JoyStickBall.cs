@@ -51,8 +51,15 @@ public class JoyStickBall : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         Vector3 touchPos = Input.mousePosition;
 
-		//if (touchPos.x > 300)
-		//	return;
+		Debug.Log ("T " + touchPos.x);
+		Debug.Log ("W " + Screen.width);
+
+		float width = Screen.width / 2;
+
+		Debug.Log (width);
+
+		if (touchPos.x > (width - 60.0f))
+			return;
 		
         Vector3 axis = (touchPos - center).normalized;
 

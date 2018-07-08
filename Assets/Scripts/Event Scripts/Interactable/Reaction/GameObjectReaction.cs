@@ -10,4 +10,8 @@ public class GameObjectReaction : DelayedReaction
     {
         gameObject.SetActive(activeState);
     }
+
+	public override void Skip(){
+		gameObject.SetActive(activeState);
+	}
 }

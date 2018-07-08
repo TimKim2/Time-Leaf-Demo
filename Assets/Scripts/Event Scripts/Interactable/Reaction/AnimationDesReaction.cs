@@ -31,7 +31,7 @@ public class AnimationDesReaction : DelayedReaction
 
     }
 
-	public void Skip()
+	public override void Skip()
 	{
 		if (TargetObject.tag == "Player") {
 			return;

@@ -11,7 +11,7 @@ public class ConditionReaction : DelayedReaction
         condition.satisfied = satisfied;
     }
 
-	public void Skip()
+	public override void Skip()
 	{
 		condition.satisfied = satisfied;
 	}

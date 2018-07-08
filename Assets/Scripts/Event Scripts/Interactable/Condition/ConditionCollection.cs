@@ -49,15 +49,18 @@ public class ConditionCollection : ScriptableObject
         FSLocator.controlManager.m_Button.onClick.Invoke();
     }
 
-    public void SkipReaction()
+    public bool SkipReaction()
 	{
         for (int i = 0; i < requiredConditions.Length; i++)
         {
             if (!AllConditions.CheckCondition(requiredConditions[i]))
-                return;
+                return false;
         }
-        if (reactionCollection)
-            reactionCollection.Skip();
+		if (reactionCollection) {
+			if (!FSLocator.controlManager.EventIsPlaying)
+				reactionCollection.Skip ();
+		}
 
+		return true;
     }
 }

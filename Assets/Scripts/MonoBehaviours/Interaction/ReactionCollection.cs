@@ -153,42 +153,7 @@ public class ReactionCollection : MonoBehaviour
 	{
 		for (int i = startIndex; i < reactions.Length; i++)
 		{
-			if (reactions[i].GetType().Name == "AnimationReaction")
-			{
-				AnimationReaction animationReaction = reactions[i] as AnimationReaction;
-				animationReaction.Skip ();
-			}
-
-			if (reactions [i].GetType ().Name == "AnimationDesReaction") 
-			{
-				AnimationDesReaction animationDesReaction = reactions[i] as AnimationDesReaction;
-				animationDesReaction.Skip ();
-			}
-
-			if (reactions [i].GetType ().Name == "ChangePositionReaction") {
-				ChangePositionReaction changePositionReaction = reactions[i] as ChangePositionReaction;
-				changePositionReaction.Skip ();
-			}
-
-			if (reactions [i].GetType ().Name == "ConditionReaction") {
-				ConditionReaction conditionReaction = reactions[i] as ConditionReaction;
-				conditionReaction.Skip ();
-			}
-
-			if (reactions [i].GetType ().Name == "ChoiceReaction") {
-				ChoiceReaction choiceReaction = reactions[i] as ChoiceReaction;	
-				choiceReaction.Skip ();
-			}
-
-			if (reactions [i].GetType ().Name == "EventCallbackReaction") {
-				EventCallbackReaction eventCallbackReaction = reactions[i] as EventCallbackReaction;
-				eventCallbackReaction.Skip ();
-			}
-            if (reactions[i].GetType().Name == "EventCallbackConditionReaction")
-            {
-                EventCallbackConditionReaction eventCallbackConditionReaction = reactions[i] as EventCallbackConditionReaction;
-                eventCallbackConditionReaction.Skip();
-            }
+			reactions [i].Skip ();
         }
 
 	}

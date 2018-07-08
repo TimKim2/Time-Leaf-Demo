@@ -3,12 +3,12 @@ public class LostItemReaction : DelayedReaction
     public Item item;
 	public int itemNumber;
 
-    private Inventory inventory;
+    //private Inventory inventory;
 
 
     protected override void SpecificInit()
     {
-        inventory = FindObjectOfType<Inventory> ();
+        //inventory = FindObjectOfType<Inventory> ();
     }
 
 

@@ -38,7 +38,7 @@ public class ChoiceReaction : DelayedReaction
         FSLocator.choiceDisplayer.secondButton.onClick.AddListener(delegate { SetSecondReaction(); });
     }
 
-	public void Skip()
+	public override void Skip()
 	{
 		firstReactionCollection.Skip ();
 	}

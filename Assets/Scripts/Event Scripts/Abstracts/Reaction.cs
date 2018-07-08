@@ -19,4 +19,8 @@ public abstract class Reaction : ScriptableObject
 
 
     protected abstract void ImmediateReaction ();
+
+	public virtual void Skip(){
+
+	}
 }

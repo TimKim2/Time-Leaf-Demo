@@ -33,7 +33,7 @@ public class EventCallbackConditionReaction : DelayedReaction
         FSLocator.controlManager.m_Button.onClick.Invoke();
     }
 
-    public void Skip()
+	public override void Skip()
     {
         for (int i = 0; i < conditionCollections.Length; i++)
         {

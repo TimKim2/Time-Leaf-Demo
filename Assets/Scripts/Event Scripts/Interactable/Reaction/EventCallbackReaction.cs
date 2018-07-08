@@ -10,7 +10,7 @@ public class EventCallbackReaction : DelayedReaction
         FSLocator.controlManager.m_Button.onClick.Invoke();
     }
 
-	public void Skip()
+	public override void Skip()
 	{
 		newReactionCollection.Skip ();
 	}

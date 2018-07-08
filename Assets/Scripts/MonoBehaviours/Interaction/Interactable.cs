@@ -11,18 +11,21 @@ public class Interactable : MonoBehaviour
 
 	public void Start()
 	{
-		/*if (IsSkip) {
-			for (int i = 0; i < conditionCollections.Length; i++)
-			{
-				conditionCollections [i].SkipReaction ();
-
-			}
-		}*/
+		
 	}
 
     // Event Trigger 딱 한번만 실행되는 시작함수 (조건에 맞으면, Start)
     public void Interact ()
     {
+		if (isSkip) {
+			for (int i = 0; i < conditionCollections.Length; i++)
+			{
+				if (conditionCollections [i].SkipReaction ()) {
+					return;
+				}
+			}
+		}
+
         for (int i = 0; i < conditionCollections.Length; i++)
         {			
 			if (conditionCollections [i].CheckAndReact ()) {

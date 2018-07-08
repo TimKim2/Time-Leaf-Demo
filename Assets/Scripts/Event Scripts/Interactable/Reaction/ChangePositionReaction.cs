@@ -10,7 +10,7 @@ public class ChangePositionReaction : DelayedReaction
         target.transform.position = pos.transform.position;
     }
 
-	public void Skip()
+	public override void Skip()
 	{
 		if (target.tag == "Player") {
 			return;
